@@ -8,7 +8,7 @@ import "@fontsource/open-sans";
 import "@fontsource/poppins";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
   return (
     <ThemeProvider
       theme={

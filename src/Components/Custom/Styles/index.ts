@@ -25,8 +25,11 @@ export const TextStyles = makeStyles()((theme) => ({
     fontFamily: "Open sans",
     letterSpacing: "0.1rem",
     color: theme.palette.secondary.main,
+    clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+
     [theme.breakpoints.up("md")]: {
       fontSize: "4rem",
+      maxWidth: "25ch",
       lineHeight: "6rem",
     },
     [theme.breakpoints.up("lg")]: {
@@ -40,9 +43,12 @@ export const TextStyles = makeStyles()((theme) => ({
     lineHeight: "6rem",
     letterSpacing: "0.1rem",
     fontFamily: "Open sans",
+    clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+
     color: theme.palette.secondary.dark,
     [theme.breakpoints.up("md")]: {
-      fontSize: "40rem",
+      fontSize: "4rem",
+      maxWidth: "30ch",
       lineHeight: "6.4rem",
     },
     [theme.breakpoints.up("lg")]: {

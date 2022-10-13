@@ -1,14 +1,20 @@
 import React from "react";
-import { Button, ButtonProps, styled } from "@mui/material";
+import { Button, ButtonProps, styled, LinkBaseProps } from "@mui/material";
 import { BtnStyles } from "./Styles";
 import type { IBtn } from "../../Interface";
 
-const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
+type TCustomButton = LinkBaseProps &
+  ButtonProps & {
+    href: string | undefined;
+  };
+
+const CustomButton = styled(Button)<TCustomButton>(({ theme }) => ({
   minWidth: "16rem",
+  maxWidth: "32rem",
   fontSize: "1.6rem",
   paddingBlock: "1rem",
   paddingInline: "2.4rem",
-  height: "4rem",
+  height: "5.2rem",
   fontWeight: "400",
   borderRadius: "1rem",
   letterSpacing: "0.1rem",
@@ -21,18 +27,28 @@ const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
   },
 }));
 
-export const PrimaryBtn = ({ name }: IBtn) => {
+export const PrimaryBtn = ({ name, id, href }: IBtn) => {
   const { classes } = BtnStyles();
   return (
-    <CustomButton variant="contained" className={classes.primarybtn}>
+    <CustomButton
+      href={href}
+      id={id}
+      variant="contained"
+      className={classes.primarybtn}>
       {name}
     </CustomButton>
   );
 };
-export const SecondaryBtn = ({ name }: IBtn) => {
+export const SecondaryBtn = ({ name, id, href }: IBtn) => {
   const { classes } = BtnStyles();
   return (
-    <CustomButton variant="outlined" className={classes.secondarybtn}>
+    <CustomButton
+      href={href}
+      id={id}
+      target="_blank"
+      rel="noreferrer noopener"
+      variant="outlined"
+      className={classes.secondarybtn}>
       {name}
     </CustomButton>
   );

@@ -3,10 +3,10 @@ import { Typography } from "@mui/material";
 import { TextStyles } from "./Styles";
 import type { IHeadings } from "../../Interface";
 
-const Heading = ({ name }: IHeadings) => {
+const Heading = ({ name, id }: IHeadings) => {
   const { classes } = TextStyles();
   return (
-    <Typography variant="h1" className={classes.Headings}>
+    <Typography id={id} variant="h1" className={classes.Headings}>
       {name}
     </Typography>
   );

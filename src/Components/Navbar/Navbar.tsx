@@ -9,6 +9,8 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { LargeDrawer, MidDrawer, SmallDrawer } from "./drawers";
+import { SocialIcons } from "../Custom/Icons";
+import { socialLinks } from "./links";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,24 +23,18 @@ const Navbar = () => {
           [theme.breakpoints.up("md")]: {
             display: "none",
           },
-        })}>
+        })}
+        position="static">
         <Toolbar
           sx={{
             justifyContent: "space-between",
           }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <Avatar sx={{ width: "4rem", height: "4rem" }} />
-
-            <Typography
-              sx={(theme) => ({
-                fontSize: "2.4rem",
-                color: theme.palette.background.default,
-                fontWeight: "700",
-                letterSpacing: "0.3rem",
-              })}
-              variant="body1">
-              Enx
-            </Typography>
+            {socialLinks.map((link) => (
+              <React.Fragment key={link._id}>
+                <SocialIcons id="Home-links" to={link.to} icon={link.comp} />
+              </React.Fragment>
+            ))}
           </Box>
           <IconButton onClick={() => setToggle(true)}>
             <MenuIcon

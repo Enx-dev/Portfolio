@@ -6,12 +6,20 @@ type Props = {
 
 const CustomContainer = styled(Container)<ContainerProps>(({ theme }) => ({
   maxWidth: "100%",
+  minHeight: "100vh",
   paddingInline: "1.6rem",
+  paddingBlock: "5.6rem",
+  justifyContent: "center",
+  display: "flex",
   [theme.breakpoints.up("md")]: {
-    paddingInline: "2.4rem",
+    paddingInlineStart: "22.4rem",
+    paddingBlock: "1.6rem",
+    alignItems: "center",
   },
   [theme.breakpoints.up("lg")]: {
-    paddingInline: "4rem",
+    paddingInlineStart: "32rem",
+    paddingBlock: "1.6rem",
+    alignItems: "center",
   },
 }));
 

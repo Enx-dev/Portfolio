@@ -2,6 +2,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import BookIcon from "@mui/icons-material/Book";
 import AboutIcon from "@mui/icons-material/Info";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
+
+import SkillsIcon from "@mui/icons-material/SafetyCheck";
 import CodeIcon from "@mui/icons-material/Code";
 import MarkEmailReadIcon from "@mui/icons-material/MarkEmailRead";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -37,6 +39,12 @@ const navLinks = [
     name: "Experience",
     icon: <AccountTreeIcon />,
     to: "/experience",
+  },
+  {
+    _id: 4,
+    name: "Skills",
+    icon: <SkillsIcon />,
+    to: "/skills",
   },
 ];
 
